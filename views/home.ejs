@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeros and Ones Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon_dark.JPG" type="image/x-icon">
+
+</head>
+<body>
+    <%- include('header')%>
+    <main>
+        <div class="container home-container">
+            <p class="welcome-message">Welcome back <%=user.firstName %> </p>
+            <div class="courses-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/artificial-intelligence.png" alt="Artificial intelligence">
+                    </div>
+                    <div class="card-text">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam cumque sit, sunt iure officiis quis! </p>
+                        <div class="icons">
+                            <form action="/upvote" method="post">
+                                <input type="hidden" name="id" value="1">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-up"></ion-icon>
+                                    <span><%=locals.votes[0].upvotes%></span>
+                                </button>
+                            </form>
+                            <form action="/downvote" method="post">
+                                <input type="hidden" name="id" value="1">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-down"></ion-icon>
+                                    <span><%=locals.votes[0].downvotes%></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/internet.png" alt="web development">
+                    </div>
+                    <div class="card-text">
+                        <h3>Web development</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum iste ab eaque optio libero. Inventore. </p>
+                        <div class="icons">
+                            <form action="/upvote" method="post">
+                                <input type="hidden" name="id" value="2">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-up"></ion-icon>
+                                    <span><%=locals.votes[1].upvotes%></span>
+
+                                </button>
+                            </form>
+                            <form action="/downvote" method="post">
+                                <input type="hidden" name="id" value="2">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-down"></ion-icon>
+                                    <span><%=locals.votes[1].downvotes%></span>
+                                </button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/computer.png" alt="IT Support">
+                    </div>
+                    <div class="card-text">
+                        <h3>IT Support</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia sunt harum fugit illum ut. </p>
+                        <div class="icons">
+                            <form action="/upvote" method="post">
+                                <input type="hidden" name="id" value="3">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-up"></ion-icon>
+                                    <span><%=locals.votes[2].upvotes%></span>
+                                </button>
+                            </form>
+                            <form action="/downvote" method="post">
+                                <input type="hidden" name="id" value="3">
+                                <button type="submit">
+                                    <ion-icon name="thumbs-down"></ion-icon>
+                                    <span><%=locals.votes[2].downvotes%></span>
+
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
